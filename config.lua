@@ -4,7 +4,6 @@ Config.DrawDistance  = 10.0
 Config.Size          = { x = 1.5, y = 1.5, z = 0.5 }
 Config.Color         = { r = 0, g = 128, b = 255 }
 
-Config.Locale        = GetConvar('esx:locale', 'en')
 
 
 Config.Zones = {
@@ -103,20 +102,12 @@ Config.Zones = {
 			vector3(2567.6, 294.3, 107.7),
 			vector3(-1117.5, 2698.6, 17.5),
 			vector3(842.4, -1033.4, 27.1),
-			vector3(5034.8,-5692.04,19.88),
 		}
 	},
 
 	BlackWeashop = {
 		Legal = false,
-		Blip = {
-			Enabled = false,
-			Sprite = 110,
-			Color = 59,
-			Display = 4,
-			Scale = 0.7,
-			ShortRange = true
-		},
+		
 		Items = {
 			{
 				name = "WEAPON_PISTOL",
@@ -189,7 +180,6 @@ Config.Zones = {
 		},
 		Locations = {
 			vector3(-1306.2, -394.0, 35.6),
-			vector3(5037.68,-5695.48,19.88),
 		}
 	}
 }
