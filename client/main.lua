@@ -105,7 +105,7 @@ function OpenShopMenu(zone)
                 local button, currentIndex = WarMenu.ComboBox('Count', items, state.currentIndex)
                 state.currentIndex = currentIndex
                 if button then 
-                    local dialog = ESX.dialogBox()
+                    local dialog = dialogBox()
                     numberDialog = tonumber(dialog)
                     if numberDialog then 
                         state.currentIndex = numberDialog
@@ -131,6 +131,19 @@ function OpenShopMenu(zone)
         end
     end)
 end
+
+function dialogBox()
+    DisplayOnscreenKeyboard(1, "FMMC_MPM_NA", "", "", "", "", "", 30)
+    while (UpdateOnscreenKeyboard() == 0) do
+        DisableAllControlActions(0);
+        Wait(0);
+    end
+    if (GetOnscreenKeyboardResult()) then
+        local result = GetOnscreenKeyboardResult()
+        return result
+    end
+end
+
 
 function DisplayBoughtScaleform(weaponName, price)
     local scaleform = ESX.Scaleform.Utils.RequestScaleformMovie('MP_BIG_MESSAGE_FREEMODE')
